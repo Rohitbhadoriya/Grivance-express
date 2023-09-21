@@ -1,0 +1,50 @@
+<%-include('../layouts/header.ejs') %>
+  <%-include('../layouts/sidebar.ejs') %>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+      <!-- Main content -->
+      <div class="content">
+        <br>
+        <br>
+        <!-- /.card -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Edit Student</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            
+            <form action="/admin/studentupdate/<%= d._id %>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" value="<%= d.name %>" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" value="<%= d.email %>" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input readonly type="password" value="<%= d.password %>" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Image</label>
+                  <input type="file" name="image" class="form-control" required>
+                </div>
+                <br><br>
+                <img src="<%= d.image.url %>" alt="" width="50" style="border-radius: 20px;">
+                <button class="btn btn-success" type="Submit">Update</button>
+              </form>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        <!--modal start-->
+
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%-include('../layouts/footer.ejs') %>

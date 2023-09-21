@@ -1,0 +1,61 @@
+<%-include('../layouts/header.ejs') %>
+    <%-include('../layouts/sidebar.ejs') %>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+
+            <!-- Main content -->
+            <div class="content">
+                <br>
+                <br>
+                <!-- /.card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Update Profile</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <form action="/updateprofile" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label> Name</label>
+                                <input type="text" name="name" value="<%= n %>" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email" value="<%= e %>" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Course</label>
+                                <input type="email" name="course" value="<%= co %>" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="number" name="phone" value="<%= p %>"class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" name="city" value="<%= c %>" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea name="address"  class="form-control" required><%= a %></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input type="file" name="image" class="form-control" required>
+                              </div>
+                              <br><br>
+                              <img src="<%= img.url %>" alt="" width="50" style="border-radius: 20px;">
+                            <button class="btn btn-success" type="Submit">Update Profile</button>
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!--modal start-->
+
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <%-include('../layouts/footer.ejs') %>

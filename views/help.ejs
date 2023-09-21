@@ -1,0 +1,59 @@
+<%-include('./header.ejs')%>
+<!--slide bar start-->
+<div class="carousel slide" data-bs-ride="carousel" id="bb">
+    <div class="carousel-inner">
+        <div class="carousel-item active height" data-bs-interval="4000" >
+            <img src="https://media.istockphoto.com/id/1165683016/photo/happy-students-walking-together-in-campus-having-break.jpg?s=612x612&w=0&k=20&c=WXPJrrArm-efcsc6ohTOfdTiNZkAZcb5dw83HrkKiCI=" alt="" class="w-100" style="height: 400px;">
+        </div>
+    </div>
+    </div>
+    <!--slide bar end--> 
+    <!--form-section-start-->  
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <h1 class=" text-center why">
+                    <span>How May</span> I Help You
+                </h1>
+            </div>
+        </div>
+    </div><!--./container-fluid-end-->
+    <br>
+    <div class="container-fluid main">
+        <div class="container">
+            <div class="row paddingtop">
+                <div class="col-md-6 comborder">
+                    <form class="ng-untouched ng-pristine ng-invalid" action="/inserthelp" method="post">
+                        <h2 class="ml-11 text-center Your">LEAVE US MASSAGE</h2>
+                        <div class="form-group help">
+                            <input type="text" name="name" placeholder="Name" class="form-control">
+                        </div>
+                        <div class="form-group help">
+                            <input type="text" name="rollno" placeholder="Roll No:" class="form-control">
+                        </div>
+                        <div class="form-group help">
+                            <input type="text" name="email" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group help">
+                            <input type="number" name="mobile" placeholder="Phone" class="form-control">
+                        </div>
+                        <div class="form-group help">
+                            <textarea name="message" placeholder="Message" class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-group help">
+                            <a href="">
+                                <button class="btn shadow-lg form-control subbtn">Submit</button>
+                            </a>
+                        </div>
+                        
+                    </form>
+                </div><!--./col-md-6-end-->
+                <div class="col-md-6">
+                    <h1 class="cursive text-center">HOW MAY I HELP YOU</h1>
+                </div>
+            </div><!--./row-end-->
+        </div><!--./container end-->
+    </div><!--./container-fluid-end-->
+    <!--form-section-end-->  
+    <br> <br>
+<%-include('./footer.ejs')%>

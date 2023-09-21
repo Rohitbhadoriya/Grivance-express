@@ -1,0 +1,57 @@
+<%-include('../layouts/header.ejs') %>
+  <%-include('../layouts/sidebar.ejs') %>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+      <!-- Main content -->
+      <div class="content">
+        <br>
+        <br>
+        <!-- /.card -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">View Student</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Course</th>
+                  <th>Password</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><%= d._id %></td>
+                    <td><%= d.name %></td>
+                    <td><%= d.email %></td>
+                    <td><%= d.course %></td>
+                    <td><%= d.password %></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Course</th>
+                  <th>Password</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        <!--modal start-->
+
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%-include('../layouts/footer.ejs') %>

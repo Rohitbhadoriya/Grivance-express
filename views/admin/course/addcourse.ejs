@@ -1,0 +1,92 @@
+<%-include('../layouts/header.ejs') %>
+<%-include('../layouts/sidebar.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <div class="content">
+                <h1>Display Course</h1>
+                <!-- /.card -->
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"></h3>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addcourse"
+                            style="float: right;">
+                            Add Course
+                        </button>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Course</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% o.forEach((item)=>{ %>
+                                    <tr>
+                                        <td><%= item._id %></td>
+                                        <td><%= item.cname %></td>
+                                        <td>
+                                            <a href="/admin/courseview/<%= item._id %>" class="btn btn-info">View</a>
+                                            <a href="/admin/courseedit/<%= item._id %>" class="btn btn-success">Edit</a>
+                                            <a href="/admin/coursedelete/<%= item._id %>" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+
+                            <%  }) %>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Course</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+                <!--modal add student-->
+                <div class="modal fade" id="addcourse">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Add Course</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/courseinsert" method="post">
+                                    <div class="form-group">
+                                        <label for="">Course</label>
+                                        <input type="text" name="cname" class="form-control" required>
+                                    </div>
+                                    <button class="btn btn-success" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!--modal end add student-->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+
+
+
+
+
+
+<%-include('../layouts/footer.ejs') %>

@@ -1,0 +1,32 @@
+<%-include('./header.ejs')%>
+ <!--------------- login Form start--------->
+ <div class="container-fluid login">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-6 log-us shadow-lg 1pborder">
+                <h4 class="Your text-center">Students Login Your Account</h4>
+                <form class="chh" action="/studentlogin" method="post">
+                    <div class="form-group">
+                        <label for="">Email:</label>
+                        <input type="text" name="email" placeholder="email or roll no." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <label for="">Password:</label>
+                        <input type="password" name="password" placeholder="password" class="form-control">
+                    </div>
+                    <br> <br>
+                    <div>
+                        <button class="rgbutton shadow-lg form-group" type="submit" value="login" onclick="">Log In</button>
+                        <span style="color: white;">forget account & password?</span>
+                        <a href="">Click</a>
+                        <p style="color: white;">Only Student Can Login Here...</p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+    </div>
+</div>
+<!------login form end------------>
+<%-include('./footer.ejs')%>

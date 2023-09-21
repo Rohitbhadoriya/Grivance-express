@@ -1,0 +1,61 @@
+<%-include('../admin/layouts/header.ejs')%>
+<%-include('../admin/layouts/sidebar.ejs')%>
+
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <div class="content">
+        <!-- /.card -->
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"></h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Complain Type</th>
+                  <th>Semester</th>
+                  <th>Subject</th>
+                  <th>Complaint Details</th>
+                  <th>Attached File</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td><%= c._id %></td>
+                    <td><%= c.ctype %></td>
+                    <td><%= c.semester %></td>
+                    <td><%= c.subject %></td>
+                    <td><%= c.cdetail %></td>
+                    <td>
+                      <img src="<%= c.image.url %>" alt="" style="width: 50px; border-radius: 2px;">
+                    </td>
+                  </tr>
+               
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>ID</th>
+                  <th>Complain Type</th>
+                  <th>Semester</th>
+                  <th>Subject</th>
+                  <th>Complaint Details</th>
+                  <th>Attached File</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%-include('../admin/layouts/footer.ejs')%>
